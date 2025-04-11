@@ -1,8 +1,14 @@
 body {
-    background-color: rgb(240, 249, 255);
+    background-color: rgb(228, 219, 255);
     font-family: lexend;
     color: rgb(0, 4, 66);
+    width: 600px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
 }
 h1 {
     color: blue;
+}
+.container {
+    display: flexbox;
 }
