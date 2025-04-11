@@ -1,14 +1,49 @@
 body {
-    background-color: rgb(228, 219, 255);
+    background-color: rgb(24, 19, 37);
     font-family: lexend;
-    color: rgb(0, 4, 66);
+    color: rgb(176, 181, 255);
     width: 600px;
     margin: 0 auto;
-    padding: 0 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+}
+p {
+    padding: 0 0 20px 0;
 }
 h1 {
-    color: blue;
+    color: rgb(255, 255, 255);
+    font-size:xx-large;
+    padding-top: 20px;
 }
+h2 {
+    color: rgb(118, 95, 245);
+    font-size: x-large;
+    padding-top: 20px;
+}
+h3 {
+    color: rgb(166, 111, 255);
+    font-size: larger;
+    padding-top: 20px;
+}
+h4 {
+    color: rgb(204, 95, 255);
+    font-size: large;
+    padding-top: 20px;
+}
+a {
+    color: rgb(255, 0, 212);
+
+}
+a:hover {
+    color: rgb(255, 255, 255);
+
+}
+a:active {
+    color: rgb(255, 123, 233);
+
+}
+
+
 .container {
     display: flexbox;
+    background-color: rgb(50, 41, 75);
 }
