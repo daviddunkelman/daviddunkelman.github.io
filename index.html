@@ -3,7 +3,14 @@
 <head>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-</head>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+</head>   
+<div id= "nav"></div>
+<script>
+    $.get("navigation.html", function(data){
+        $("#nav").replaceWith(data);
+    });
+</script> 
 <div class="container">
 
     <h1>David Dunkelman</h1>
