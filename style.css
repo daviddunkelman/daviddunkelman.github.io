@@ -2,17 +2,21 @@ body {
     background-color: rgb(24, 19, 37);
     font-family: lexend;
     color: rgb(176, 181, 255);
-    width: 600px;
+    width: 1000px;
     margin: 0 auto;
     padding: 20px;    
     
 }
-.container {
+.boundary {
     display: flexbox;
     background-color: rgb(50, 41, 75);
     padding: 20px;
 }
-
+.navbox{
+    display:inline;
+    background-color: rgb(34, 19, 77);
+    padding: 10px;
+}
 p {
     padding-bottom: 20px;
 }
@@ -50,3 +54,56 @@ a:active {
 }
 
 
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+  }
+  
+/* Style the images inside the grid */
+.column img {
+    height: 100px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+  
+.column img:hover {
+    opacity: 1;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}  
+
+/* Expanding image text */
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+.container {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-color: black;
+    
+}
+#expandedImg {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
