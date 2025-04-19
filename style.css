@@ -24,21 +24,25 @@ h1 {
     color: rgb(255, 255, 255);
     font-size:xx-large;
     padding-top: 20px;
+    padding-bottom: 10px;
 }
 h2 {
     color: rgb(118, 95, 245);
     font-size: x-large;
     padding-top: 20px;
+    padding-bottom: 10px;
 }
 h3 {
     color: rgb(166, 111, 255);
     font-size: larger;
     padding-top: 20px;
+    padding-bottom: 10px;
 }
 h4 {
     color: rgb(204, 95, 255);
     font-size: large;
     padding-top: 20px;
+    padding-bottom: 10px;
 }
 a {
     color: rgb(255, 0, 212);
@@ -63,13 +67,15 @@ a:active {
   
 /* Style the images inside the grid */
 .column img {
+    border-radius: 5px;
     height: 100px;
     opacity: 0.8;
-    cursor: pointer;
+    cursor: pointer;    
 }
   
 .column img:hover {
     opacity: 1;
+    transform: scale(1.05);
 }
   
 /* Clear floats after the columns */
@@ -80,7 +86,7 @@ a:active {
 }  
 
 /* Expanding image text */
-#imgtext {
+.imgtext {
     position: absolute;
     bottom: 15px;
     left: 15px;
@@ -95,7 +101,7 @@ a:active {
     background-color: black;
     
 }
-#expandedImg {
+.expandedImg {
     max-height: 100%;
     max-width: 100%;
     width: auto;
@@ -106,4 +112,23 @@ a:active {
     left: 0;
     right: 0;
     margin: auto;
+    display: block;
+}
+
+.imgbutton {
+    width: 300px;
+    border-radius: 5px;
+}
+.tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.tile {    
+    border-radius: 10px;
+    transition: transform 0.1s ease-in-out;
+}
+.tile:hover {
+    transform: scale(1.05);
+    opacity: 90%;
 }
