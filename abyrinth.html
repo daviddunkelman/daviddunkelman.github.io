@@ -4,65 +4,25 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="./script/imageExpand.js"></script>
 </head> 
 <script>
     $.get("navigation.html", function(data){
         $("#nav").replaceWith(data);
     });
-    function imageExpand(imgs, container, textbox) {
-        // Get the expanded image
-        var expandImg = document.getElementById(container);
-        // Get the image text
-        var imgText = document.getElementById(textbox);
-        // Use the same src in the expanded image as the image being clicked on from the grid
-        expandImg.src = imgs.src;
-        // Use the value of the alt attribute of the clickable image as text inside the expanded image
-        imgText.innerHTML = imgs.alt;
-        // Show the container element (hidden with CSS)
-        expandImg.parentElement.style.display = "block";
-    }
+  
 </script>  
 <body>
     <div id= "nav"></div>
     <div class="boundary">
         <h1>ABYRINTH</h1>    
+        <div class="tag-holder">
+            <div class="tag">3D Character Art</div>
+            <div class="tag">Programming</div>
+            <div class="tag">UI</div>
+        </div>
         
-        <div class="container"> 
-            <!-- Expanded image -->
-            <img id="expand1" class="expandedImg" src="./images/abyrinth/abyrinth_boi.png">
-            <!-- Image text -->
-            <div id="imgtext1" class="imgtext"></div>
-        </div>
-        <!-- The grid: four columns -->
-        <div class="row">
-            <div class="column">
-                <img src="./images/abyrinth/abyrinth_boi.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/abyrinth/abyrinth_flame.gif" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/abyrinth/abyrinth_gun.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/abyrinth/abyrinth_spark.gif" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/abyrinth/abyrinth_pouncer.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/abyrinth/abyrinth_grunt.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/abyrinth/abyrinth_mine.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/abyrinth/abyrinth_halen.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/abyrinth/abyrinth_gunner.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-        </div>
+       
 
 
         <p>ABYRINTH is a third-person action platformer set onboard an asteroid mining station. You play as Mylo, a young alien who has come to the station in search of clues to his late uncle's secret life and mysterious demise.</p> 
@@ -72,9 +32,28 @@
         <h2>About the project</h2>    
         <p>ABYRINTH is an ongoing project. I am working on it alongside Michael Dillabough. </p>
         <p>I have programmed all the mechanics of the game, as well as the menu  and settings. As well, I have made most character models and all visual effects.</p>
+
+        <div id="viewer1"></div>
     </div>
 
 
 
 </body>
 </html>
+<script>
+    createViewer("viewer1", img=[
+        ['./images/abyrinth/abyrinth_boi.png',''],
+        ['./images/abyrinth/abyrinth_flame.gif',''],
+        ['./images/abyrinth/abyrinth_gun.png',''],
+        ['./images/abyrinth/abyrinth_spark.gif',''],
+        ['./images/abyrinth/abyrinth_pouncer.png',''],
+        ['./images/abyrinth/abyrinth_grunt.png',''],
+        ['./images/abyrinth/abyrinth_mine.png',''],
+        ['./images/abyrinth/abyrinth_halen.png',''],
+        ['./images/abyrinth/abyrinth_gunner.png',''],
+        ['./images/abyrinth/abyrinth_screen1.png',''],
+        ['./images/abyrinth/abyrinth_screen2.png',''],
+        ['./images/abyrinth/abyrinth_holo.png','']
+        
+    ]);
+</script>

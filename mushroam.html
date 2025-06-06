@@ -4,85 +4,52 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="./script/imageExpand.js"></script>
 </head> 
 <script>
     $.get("navigation.html", function(data){
         $("#nav").replaceWith(data);
     });
-    function imageExpand(imgs, container, textbox) {
-        // Get the expanded image
-        var expandImg = document.getElementById(container);
-        // Get the image text
-        var imgText = document.getElementById(textbox);
-        // Use the same src in the expanded image as the image being clicked on from the grid
-        expandImg.src = imgs.src;
-        // Use the value of the alt attribute of the clickable image as text inside the expanded image
-        imgText.innerHTML = imgs.alt;
-        // Show the container element (hidden with CSS)
-        expandImg.parentElement.style.display = "block";
-    }
 </script>  
 <body>
     <div id= "nav"></div>
     <div class="boundary">
         <h1>Mushroam</h1>    
+        <div class="tag-holder">
+            <div class="tag">2D Art</div>
+            <div class="tag">3D Art</div>     
+            <div class="tag">Viual FX</div>       
+            <div class="tag">Programming</div>
+            
+        </div>
         
-        <div class="container"> 
-            <!-- Expanded image -->
-            <img id="expand1" class="expandedImg" src="./images/mushroam/mushroam_mushbig.png">
-            <!-- Image text -->
-            <div id="imgtext1" class="imgtext"></div>
-        </div>
-        <!-- The grid: four columns -->
-        <div class="row">
-            <div class="column">
-                <img src="./images/mushroam/mushroam_mushbig.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/mushroam/mushroam_topsbig.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/mushroam/mushroam_veilbig.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/mushroam/mushroam_celiabig.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/mushroam/mushroam_sporabig.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/mushroam/mushroam_truffbig.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/mushroam/mushroam_bolobig.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/mushroam/mushroam_capibig.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/mushroam/mushroam_logo4x.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            
-            
-            
-        </div>
-
-
-        <p>Mushroam is a 2.5D puzzle platformer. In the game, you control a mushroom person as they explore underground to seek a way to save their village.</p> 
+        
         <a href="https://skypyre.itch.io/mushroam">Itch.io page</a>     
         <h2>About the project</h2>    
-        <p>.</p>
-
-        <p>A 2.5D Puzzle Platformer</p>
-        <p>Pixel Art. Voxel Modelling</p>   
-            
-
-
-      
-        
+        <p>Mushroam is a 2.5D puzzle platformer. In the game, you control a mushroom person as they explore underground to seek a way to save their village.</p> 
+        <h2>My Role</h2>   
+        <ul style="list-style-type:disc;">
+            <li>Pixel Art: Character designs, animations, key art, in-game elements</li>
+            <li>Most visual effects</li>
+            <li>One of the in-game level artists</li>
+            <li>One of the voxel modellers</li>            
+            <li>One of the level-designers</li>
+            <li>Sundry programming</li>
+        </ul> 
+        <div id="pixelViewer"></div>
     </div>
-
-
-
 </body>
 </html>
+<script>
+    createViewer("pixelViewer",img=[
+    ['./images/mushroam/mushroam_mushbig.png',''],
+    ['./images/mushroam/mushroam_topsbig.png',''],
+    ['./images/mushroam/mushroam_veilbig.png',''],
+    ['./images/mushroam/mushroam_celiabig.png',''],
+    ['./images/mushroam/mushroam_sporabig.png',''],
+    ['./images/mushroam/mushroam_truffbig.png',''],
+    ['./images/mushroam/mushroam_bolobig.png',''],
+    ['./images/mushroam/mushroam_capibig.png',''],
+    ['./images/mushroam/mushroam_logo4x.png',''],
+    ]);
+</script>

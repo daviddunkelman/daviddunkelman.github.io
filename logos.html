@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="./script/imageExpand.js"></script>
+</head> 
+<script>
+    $.get("navigation.html", function(data){
+        $("#nav").replaceWith(data);
+    });
+   
+</script>  
+<body>
+    <div id= "nav"></div>
+    <div class="boundary">
+        <h1>Logos</h1>    
+        <div class="tag-holder">
+            <div class="tag">2D Art</div>
+        </div>
+        <div id="logoViewer"></div>
+
+
+
+        <h2>Skypyre Logo Case Study</h2>
+        <div id="spViewer"></div>
+
+    </div>
+
+
+
+</body>
+</html>
+<script>
+    createViewer("logoViewer", img=[
+        ['./images/mushroam/mushroam_logo4x.png','The logo for Mushroam'],
+        ['./images/blobs/blobs_logo.png',''],
+        ['./images/logos/logos_busbuddy.png',''],
+        ['./images/logos/logos_skypyre.png',''],
+        ['./images/logos/logos_personal.png','']
+    ]);
+    createViewer("spViewer", img=[
+        ['./images/logos/logos_sp1.png','Original SkyPyre Studios logo by Michael Dillabough'],
+        ['./images/logos/logos_sp2.png',''],
+        ['./images/logos/logos_sp3.png',''],
+        ['./images/logos/logos_sp4.png',''],
+        ['./images/logos/logos_sp5.png',''],
+        ['./images/logos/logos_sp6.png',''],
+        ['./images/logos/logos_sp7.png',''],
+        ['./images/logos/logos_sp8.png',''],
+        ['./images/logos/logos_sp9.png',''],
+        ['./images/logos/logos_sp10.png',''],
+        ['./images/logos/logos_sp11.png',''],
+        ['./images/logos/logos_sp12.png',''],
+        ['./images/logos/logos_sp13.png',''],
+        ['./images/logos/logos_sp14.png',''],
+        ['./images/logos/logos_sp15.png',''],
+        ['./images/logos/logos_sp16.png',''],
+        ['./images/logos/logos_sp17.png',''],
+        ['./images/logos/logos_sp18.png',''],
+        ['./images/logos/logos_sp19.png',''],
+        ['./images/logos/logos_skypyre.png','']
+
+    ]);
+</script>

@@ -4,154 +4,75 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="./script/imageExpand.js"></script>
 </head> 
 <script>
     $.get("navigation.html", function(data){
         $("#nav").replaceWith(data);
-    });
-    function imageExpand(imgs, container, textbox) {
-        // Get the expanded image
-        var expandImg = document.getElementById(container);
-        // Get the image text
-        var imgText = document.getElementById(textbox);
-        // Use the same src in the expanded image as the image being clicked on from the grid
-        expandImg.src = imgs.src;
-        // Use the value of the alt attribute of the clickable image as text inside the expanded image
-        imgText.innerHTML = imgs.alt;
-        // Show the container element (hidden with CSS)
-        expandImg.parentElement.style.display = "block";
-    }
+    });    
+    
+   
 </script>  
 <body>
     <div id= "nav"></div>
-    <div class="boundary">
+    <div class="boundary">       
+
         <h1>Relicbound</h1>
+        <div class="tag-holder">
+            <div class="tag">2D Character Art</div>
+            <div class="tag">Visual FX</div>
+        </div>
         <h3>Concept art for a third person platformer</h3>
         <p>Relicbound is a project which is on indefinite hold. During the development, I created concept art for characters and objects and worked on particle effects.</p>
 
         <h2>Halen</h2>
-        <div class="container"> 
-            <!-- Expanded image -->
-            <img id="expand2" class="expandedImg" src="./images/halen/relic_halen_up.png">
-            <!-- Image text -->
-            <div id="imgtext2" class="imgtext"></div>
-        </div>
-        <div class="row">
-            <div class="column">
-                <img src="./images/halen/relic_halen_up.png" alt="" onclick="imageExpand(this, 'expand2', 'imgtext2');">
-            </div>
-            <div class="column">
-                <img src="./images/halen/relic_halen_sheet.png" alt="" onclick="imageExpand(this, 'expand2', 'imgtext2');">
-            </div>
-            <div class="column">
-                <img src="./images/halen/halen_crisp.png" alt="" onclick="imageExpand(this, 'expand2', 'imgtext2');">
-            </div>
-            <div class="column">
-                <img src="./images/halen/halen_bright.png" alt="" onclick="imageExpand(this, 'expand2', 'imgtext2');">
-            </div>
-            <div class="column">
-                <img src="./images/halen/halen_purple.png" alt="" onclick="imageExpand(this, 'expand2', 'imgtext2');">
-            </div>
-            <div class="column">
-                <img src="./images/halen/halen_casual.png" alt="" onclick="imageExpand(this, 'expand2', 'imgtext2');">
-            </div>
-            <div class="column">
-                <img src="./images/halen/halen_dynamic.png" alt="" onclick="imageExpand(this, 'expand2', 'imgtext2');">
-            </div>
-            <div class="column">
-                <img src="./images/halen/halen_gauntlet.png" alt="" onclick="imageExpand(this, 'expand2', 'imgtext2');">
-            </div>
-            <div class="column">
-                <img src="./images/halen/halen_grab.png" alt="" onclick="imageExpand(this, 'expand2', 'imgtext2');">
-            </div>
-            <div class="column">
-                <img src="./images/halen/halen_scarves.png" alt="" onclick="imageExpand(this, 'expand2', 'imgtext2');">
-            </div>
-            <div class="column">
-                <img src="./images/halen/halen_spear.png" alt="" onclick="imageExpand(this, 'expand2', 'imgtext2');">
-            </div>
-            <div class="column">
-                <img src="./images/halen/halen_space.jpg" alt="" onclick="imageExpand(this, 'expand2', 'imgtext2');">
-            </div>
-            <div class="column">
-                <img src="./images/halen/halen_first.png" alt="" onclick="imageExpand(this, 'expand2', 'imgtext2');">
-            </div>
-        </div>
 
-
-
+        <div id="halenViewer"></div>
 
         <h2>Enemies, Side characters, and objects</h2>
-        <!-- The expanding image container -->
-        <div class="container"> 
-            <!-- Expanded image -->
-            <img id="expand1" class="expandedImg" src="./images/relic/relic_brawler.png">
-            <!-- Image text -->
-            <div id="imgtext1" class="imgtext"></div>
-        </div>
-        <!-- The grid: four columns -->
-        <div class="row">
-            <div class="column">
-                <img src="./images/relic/relic_skirm3.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/relic/relic_skirm2.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/relic/relic_skirm.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/relic/relic_brawler.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/relic/relic_brawler_sheet.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/relic/relic_gunner.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/relic/relic_gunner_sheet.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/relic/relic_asltgunner.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/relic/relic_foreman.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/relic/relic_charger.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/relic/relic_docship.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>  
-            <div class="column">
-                <img src="./images/relic/relic_float.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div> 
-            <div class="column">
-                <img src="./images/relic/relic_flauripan.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>    
-            <div class="column">
-                <img src="./images/relic/relic_hship2.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/relic/relic_hship.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div> 
-            <div class="column">
-                <img src="./images/relic/relic_theravall2.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div> 
-            <div class="column">
-                <img src="./images/relic/relic_theravall.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div> 
-            <div class="column">
-                <img src="./images/relic/relic_doctor.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>  
-            <div class="column">
-                <img src="./images/relic/relic_revenant.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>  
-            <div class="column">
-                <img src="./images/relic/relic_sniper.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-        </div>
+
+        <div id="otherViewer"></div>
+
+        
     </div>
 </body>
 </html>
+<script>
+    createViewer("halenViewer", img=[
+        ['./images/halen/relic_halen_up.png',''],
+        ['./images/halen/relic_halen_sheet.png',''],
+        ['./images/halen/halen_crisp.png',''],
+        ['./images/halen/halen_bright.png',''],
+        ['./images/halen/halen_purple.png',''],
+        ['./images/halen/halen_dynamic.png',''],
+        ['./images/halen/halen_casual.png',''],
+        ['./images/halen/halen_gauntlet.png',''],
+        ['./images/halen/halen_grab.png',''],
+        ['./images/halen/halen_scarves.png',''],
+        ['./images/halen/halen_spear.png',''],
+        ['./images/halen/halen_space.jpg',''],
+        ['./images/halen/halen_first.png','']
+        ]);
+    createViewer("otherViewer", img=[
+        ['./images/relic/relic_skirm3.png',''],
+        ['./images/relic/relic_skirm2.png',''],
+        ['./images/relic/relic_skirm.png',''],
+        ['./images/relic/relic_brawler.png',''],
+        ['./images/relic/relic_brawler_sheet.png',''],
+        ['./images/relic/relic_gunner.png',''],
+        ['./images/relic/relic_gunner_sheet.png',''],
+        ['./images/relic/relic_asltgunner.png',''],
+        ['./images/relic/relic_foreman.png',''],
+        ['./images/relic/relic_charger.png',''],
+        ['./images/relic/relic_docship.png',''],
+        ['./images/relic/relic_float.png',''],
+        ['./images/relic/relic_flauripan.png',''],
+        ['./images/relic/relic_hship2.png',''],
+        ['./images/relic/relic_hship.png',''],
+        ['./images/relic/relic_theravall2.png',''],
+        ['./images/relic/relic_theravall.png',''],
+        ['./images/relic/relic_doctor.png',''],
+        ['./images/relic/relic_revenant.png',''],
+        ['./images/relic/relic_sniper.png','']
+    ]);
+</script>

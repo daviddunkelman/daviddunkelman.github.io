@@ -4,92 +4,41 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="./script/imageExpand.js"></script>
 </head> 
 <script>
     $.get("navigation.html", function(data){
         $("#nav").replaceWith(data);
     });
-    function imageExpand(imgs, container, textbox) {
-        // Get the expanded image
-        var expandImg = document.getElementById(container);
-        // Get the image text
-        var imgText = document.getElementById(textbox);
-        // Use the same src in the expanded image as the image being clicked on from the grid
-        expandImg.src = imgs.src;
-        // Use the value of the alt attribute of the clickable image as text inside the expanded image
-        imgText.innerHTML = imgs.alt;
-        // Show the container element (hidden with CSS)
-        expandImg.parentElement.style.display = "block";
-    }
+   
 </script>  
 <body>
     <div id= "nav"></div>
     <div class="boundary">
-        <h1>Other Artworks</h1>    
-        
-        <div class="container"> 
-            <!-- Expanded image -->
-            <img id="expand1" class="expandedImg" src="./images/other/other_Slashheart.jpg">
-            <!-- Image text -->
-            <div id="imgtext1" class="imgtext"></div>
-        </div>
-        <!-- The grid: four columns -->
-        <div class="row">
-            <div class="column">
-                <img src="./images/other/other_Slashheart.jpg" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/other/other_3dXopex.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/other/other_Awaken_The_Blade.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/other/other_Dak_At_Peace.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/other/other_Eideron.jpg" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/other/other_gals.jpg" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/other/other_koseth.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/other/other_preEideron.jpg" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/other/other_scout.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/other/other_skyworld.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/other/other_wind.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/other/other_xopexdance.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/other/other_Zonzovir_3.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-        </div>
-
-
-        <p>.</p> 
-       
-
-        <h2>About the project</h2>    
-        <p>.</p>
-            
-
-
-      
-        
-    </div>
-
-
-
+        <h1>Other Artworks</h1>   
+        <div class="tag-holder">
+            <div class="tag">2D Character Art</div>
+            <div class="tag">3D Character Art</div>
+           <div class="tag">3D Art</div>
+        </div> 
+        <div id="otherViewer"></div>
 </body>
 </html>
+<script>
+    createViewer("otherViewer", img=[
+        ['./images/other/other_Annatara2.png',''],
+        ['./images/other/other_Slashheart.jpg',''],
+        ['./images/other/other_3dXopex.png',''],
+        ['./images/other/other_Awaken_The_Blade.png',''],
+        ['./images/other/other_Dak_At_Peace.png',''],
+        ['./images/other/other_Eideron.jpg',''],
+        ['./images/other/other_gals.jpg',''],
+        ['./images/other/other_koseth.png',''],
+        ['./images/other/other_preEideron.jpg',''],
+        ['./images/other/other_scout.png',''],
+        ['./images/other/other_skyworld.png',''],
+        ['./images/other/other_wind.png',''],
+        ['./images/other/other_xopexdance.png',''],
+        ['./images/other/other_Zonzovir_3.png','']
+    ]);
+</script>

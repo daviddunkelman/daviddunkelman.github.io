@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="./script/imageExpand.js"></script>
+</head> 
+<script>
+    $.get("navigation.html", function(data){
+        $("#nav").replaceWith(data);
+    });
+  
+</script>  
+<body>
+    <div id= "nav"></div>
+    <div class="boundary">
+        <h1>The Blobs Fight</h1>   
+        <div class="tag-holder">
+            <div class="tag">Viual FX</div>  
+            <div class="tag">Programming</div>               
+            <div class="tag">2D Art</div>                     
+                     
+        </div>     
+        
+
+        <p><a href="https://store.steampowered.com/app/830500/The_Blobs_Fight/">Steam Page</a></p>
+        <h2>About the project</h2>  
+        <p>The Blobs Fight is a local multiplayer party game for up to eight players. You play blobs competing or cooperating in a number of different modes. You can also customize your blob!</p>     
+          
+        <h2>My Role</h2> 
+        <ul>
+            <li>Visual Effects and effects programming</li>
+            <li>Game element programming and integration</li>
+        </ul>
+        <div id="blobsViewer"></div> 
+    </div>
+
+</body>
+</html>
+<script>
+    createViewer("blobsViewer", img=[
+        ['./images/blobs/blobs_screen1.png',''],
+        ['./images/blobs/blobs_screen2.png',''],
+        ['./images/blobs/blobs_screen3.png',''],
+        ['./images/blobs/blobs_screen4.png',''],
+        ['./images/blobs/blobs_logo.png',''],
+        ['./images/blobs/blobs_icon.png','']
+    ]);
+</script>

@@ -4,81 +4,51 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="./script/imageExpand.js"></script>
 </head> 
 <script>
     $.get("navigation.html", function(data){
         $("#nav").replaceWith(data);
     });
-    function imageExpand(imgs, container, textbox) {
-        // Get the expanded image
-        var expandImg = document.getElementById(container);
-        // Get the image text
-        var imgText = document.getElementById(textbox);
-        // Use the same src in the expanded image as the image being clicked on from the grid
-        expandImg.src = imgs.src;
-        // Use the value of the alt attribute of the clickable image as text inside the expanded image
-        imgText.innerHTML = imgs.alt;
-        // Show the container element (hidden with CSS)
-        expandImg.parentElement.style.display = "block";
-    }
+    
 </script>  
 <body>
     <div id= "nav"></div>
     <div class="boundary">
-        <h1>Evasive Maneuvers</h1>    
-        
-        <div class="container"> 
-            <!-- Expanded image -->
-            <img id="expand1" class="expandedImg" src="./images/evasive/evasive_hunterfx.png">
-            <!-- Image text -->
-            <div id="imgtext1" class="imgtext"></div>
-        </div>
-        <!-- The grid: four columns -->
-        <div class="row">
-            <div class="column">
-                <img src="./images/evasive/evasive_hunterfx.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/evasive/evasive_customization.gif" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/evasive/evasive_artemis.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/evasive/evasive_kauthen.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/evasive/evasive_reyliant.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/evasive/evasive_zehil.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/evasive/evasive_hunter1.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/evasive/evasive_hunter3.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-            <div class="column">
-                <img src="./images/evasive/evasive_runner3.png" alt="" onclick="imageExpand(this, 'expand1', 'imgtext1');">
-            </div>
-        </div>
-
-
-    
-        <p>.</p>
-        <a href="https://store.steampowered.com/app/1540650/Evasive_Maneuvers/">Steam Page</a>     
-        <h2>About the project</h2>    
-        <p>.</p>
-        <p>A Third-Person Asymmetrical Spaceship Arena</p>
-        <p>Effects. 3D Modelling. Game Programming</p>
-
-
-      
-        
+        <h1>Evasive Maneuvers</h1> 
+        <div class="tag-holder">
+            <div class="tag">Viual FX</div>              
+            <div class="tag">3D Art</div>                     
+            <div class="tag">Programming</div>            
+        </div>     
+        <p><a href="https://store.steampowered.com/app/1540650/Evasive_Maneuvers/">Steam Page</a></p>
+        <h2>About the project</h2>  
+        <p>Evasive maneuvers an asymmetrical online multiplayer game in which you play as either runners or hunters. Runners scour the map for energy to power up their escape portal while hunters try to catch and destroy them. Runners and hunters each have different abilities they select. As well, players can visually customize their hunter and runner ships, choosing models, patterns, and colours.</p>     
+        <h2>My Role</h2> 
+        <ul>
+            <li>Visual Effects and effects programming</li>
+            <li>Customization back-end</li>
+            <li>Some ship modelling</li>
+            <li>Some materials</li>
+            <li>Sundry programming</li>
+        </ul>
+        <div id="evasiveViewer"></div>   
     </div>
 
 
 
 </body>
 </html>
+<script>
+    createViewer("evasiveViewer", img=[
+    ['./images/evasive/evasive_hunterfx.png',''],
+    ['./images/evasive/evasive_customization.gif',''],
+    ['./images/evasive/evasive_artemis.png',''],
+    ['./images/evasive/evasive_kauthen.png',''],
+    ['./images/evasive/evasive_reyliant.png',''],
+    ['./images/evasive/evasive_zehil.png',''],
+    ['./images/evasive/evasive_hunter1.png',''],
+    ['./images/evasive/evasive_hunter3.png',''],
+    ['./images/evasive/evasive_runner3.png',''] 
+    ]);
+</script>
