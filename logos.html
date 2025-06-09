@@ -1,47 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logos</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script src="./script/imageExpand.js"></script>
+    <link rel="icon" type="image/x-icon" href="./images/SiteLogo.png">
 </head> 
 <script>
     $.get("navigation.html", function(data){
         $("#nav").replaceWith(data);
-    });
-   
+    });   
 </script>  
 <body>
     <div id= "nav"></div>
-    <div class="boundary">
+    <div class="boundary pattern6">
         <h1>Logos</h1>    
         <div class="tag-holder">
             <div class="tag">2D Art</div>
         </div>
         <div id="logoViewer"></div>
-
-
-
         <h2>Skypyre Logo Case Study</h2>
         <div id="spViewer"></div>
-
     </div>
-
-
-
 </body>
 </html>
 <script>
     createViewer("logoViewer", img=[
-        ['./images/mushroam/mushroam_logo4x.png','The logo for Mushroam'],
-        ['./images/blobs/blobs_logo.png',''],
-        ['./images/logos/logos_busbuddy.png',''],
-        ['./images/logos/logos_skypyre.png',''],
-        ['./images/logos/logos_personal.png','']
+        ['./images/mushroam/mushroam_logo4x.png','Mushroam logo'],
+        ['./images/blobs/blobs_logo.png','The Blobs Fight logo'],
+        ['./images/logos/logos_busbuddy.png','Busbuddy Ottawa logo'],
+        ['./images/logos/logos_skypyre.png','SkyPyre Studios logo'],
+        ['./images/logos/logos_personal.png','Personal logo']
     ]);
     createViewer("spViewer", img=[
-        ['./images/logos/logos_sp1.png','Original SkyPyre Studios logo by Michael Dillabough'],
+        ['./images/logos/logos_sp1.png','Original by Michael Dillabough'],
         ['./images/logos/logos_sp2.png',''],
         ['./images/logos/logos_sp3.png',''],
         ['./images/logos/logos_sp4.png',''],
@@ -60,7 +56,6 @@
         ['./images/logos/logos_sp17.png',''],
         ['./images/logos/logos_sp18.png',''],
         ['./images/logos/logos_sp19.png',''],
-        ['./images/logos/logos_skypyre.png','']
-
+        ['./images/logos/logos_skypyre.png','The final design']
     ]);
 </script>
