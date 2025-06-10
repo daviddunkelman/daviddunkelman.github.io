@@ -33,14 +33,19 @@ body {
     display:inline;
     background-color: rgb(63, 42, 122);
     padding: 5px 10px 7px 10px;
+    border-color: rgb(114, 74, 209);
+    border-width: 1px;
+    border-style: solid;
     border-radius: 20px 0 20px 0;
     text-decoration: none;
     font-family: monospace;
     font-size: large;
+    
 }
 
 .navbox:hover{
     padding: 10px 10px 12px 10px;
+
 }
 p {
     padding-bottom: 10px;
@@ -170,6 +175,9 @@ a:active {
     background-color: rgb(177, 71, 248);
     color: white;
     padding: 4px 7px 4px 7px;
+    border-color: rgb(75, 0, 105);
+    border-width: 1px;
+    border-style: solid;
 }
 ul {
     margin-bottom:15px;
