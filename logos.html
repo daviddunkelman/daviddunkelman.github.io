@@ -29,34 +29,61 @@
 </body>
 </html>
 <script>
-    createViewer("logoViewer", img=[
+    var slides1 = {
+        currentSlide:0,
+        thisID: "logoViewer",
+        imgs: [
         ['./images/mushroam/mushroam_logo4x.png','Mushroam'],
         ['./images/blobs/blobs_logo.png','The Blobs Fight'],
         ['./images/logos/logos_busbuddy.png','Busbuddy Ottawa'],
         ['./images/logos/logos_skypyre.png','SkyPyre Studios'],
         ['./images/logos/logos_personal.png','Personal'],
         ['./images/abyrinth/abyrinth_logo.png','Abyrinth']
-    ]);
-    createViewer("spViewer", img=[
-        ['./images/logos/logos_sp1.png','Original by Michael Dillabough'],
-        ['./images/logos/logos_sp2.png',''],
-        ['./images/logos/logos_sp3.png',''],
-        ['./images/logos/logos_sp4.png',''],
-        ['./images/logos/logos_sp5.png',''],
-        ['./images/logos/logos_sp6.png',''],
-        ['./images/logos/logos_sp7.png',''],
-        ['./images/logos/logos_sp8.png',''],
-        ['./images/logos/logos_sp9.png',''],
-        ['./images/logos/logos_sp10.png',''],
-        ['./images/logos/logos_sp11.png',''],
-        ['./images/logos/logos_sp12.png',''],
-        ['./images/logos/logos_sp13.png',''],
-        ['./images/logos/logos_sp14.png',''],
-        ['./images/logos/logos_sp15.png',''],
-        ['./images/logos/logos_sp16.png',''],
-        ['./images/logos/logos_sp17.png',''],
-        ['./images/logos/logos_sp18.png',''],
-        ['./images/logos/logos_sp19.png',''],
+    ]};
+    var slides2 = {
+        currentSlide:0,
+        thisID: "spViewer",
+        imgs: [
+        ['./images/logos/logos_sp1.png',
+        'Original by Michael Dillabough'],
+        ['./images/logos/logos_sp2.png',
+        'Ininital exploration involved figuring out what general form the new meteor would take and how it would be integrated with the text. The basic idea was hit upon fairly quickly but from then on involved refining. A first idea had the meteor dissolving into squares to keep the squares from the original in a new way.'],
+        ['./images/logos/logos_sp3.png',
+        'Colour explorations.'],
+        ['./images/logos/logos_sp4.png',
+        'Further colour exploration as well as experimenting with alterations to the meteor. The dissolving was moved inside the shape to keep the overall silhouette stronger. We were also seeing how it might work in black and white.'],
+        ['./images/logos/logos_sp5.png',
+        'Further colour exploration.'],
+        ['./images/logos/logos_sp6.png',
+        'Further colour exploration as well as adjusting the amount of dissolving present.'],
+        ['./images/logos/logos_sp7.png',
+        'Different visual representations of dissolving were explored as well as again testing how the meteor was incorporated with the text.'],
+        ['./images/logos/logos_sp8.png',
+        'A simplified dissolve pattern was tried. Different embellishments were tried to better incorporate the text with the meteor.'],
+        ['./images/logos/logos_sp9.png',
+        'Different colour variations with the text and embellishments, as well as more ideas about the meteor dissolve.'],
+        ['./images/logos/logos_sp10.png',
+        'Focus shifted to refining the silhouette of the meteor to balance a feeling of momentum without stretching it too far.'],
+        ['./images/logos/logos_sp11.png',
+        'A new silhouette having been settled upon, we explored different dissolves, looking to evoke more of a firey feeling. This new shape was tried with different colours.'],
+        ['./images/logos/logos_sp12.png',
+        'More colour explorations and a new dissolve type.'],
+        ['./images/logos/logos_sp13.png',
+        'Explorations of variations on the new dissolve and relative sizing of the elements.'],
+        ['./images/logos/logos_sp14.png',
+        'The dissolve was settled on and colour explorations continued, including exploring a single colour variation.'],
+        ['./images/logos/logos_sp15.png',
+        'A similar page, this time seeing how the design fared on black.'],
+        ['./images/logos/logos_sp16.png',
+        'The shape having been settled and the rough colours settled, the exact colours were sought.'],
+        ['./images/logos/logos_sp17.png',
+        'The final colours were settled. Once again it was experimented to see alternative ways to incorporate the meteor.'],
+        ['./images/logos/logos_sp18.png',
+        'Seeing if an upward meteor could work.'],
+        ['./images/logos/logos_sp19.png',
+        'Further experiments with incorporating the meteor.'],
         ['./images/logos/logos_skypyre.png','The final design']
-    ]);
+    ]};
+    createSlideViewer(slides1);
+    createSlideViewer(slides2);
 </script>

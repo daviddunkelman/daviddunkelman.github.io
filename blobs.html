@@ -28,7 +28,7 @@
         </div>     
         
 
-        <p><a class="navbox" href="https://store.steampowered.com/app/830500/The_Blobs_Fight/">Steam Page</a></p>
+        <p><a class="navbox" href="https://store.steampowered.com/app/830500/The_Blobs_Fight/ " target="_blank">Steam Page</a></p>
         <h2>About the project</h2>  
         <p>The Blobs Fight is a local multiplayer party game for up to eight players. You play blobs competing or cooperating in a number of different modes. You can also customize your blob!</p>     
           
@@ -43,12 +43,16 @@
 </body>
 </html>
 <script>
-    createViewer("blobsViewer", img=[
+    var slides1 = {
+        currentSlide:0,
+        thisID: "blobsViewer",
+        imgs: [
         ['./images/blobs/blobs_screen1.png',''],
         ['./images/blobs/blobs_screen2.png',''],
         ['./images/blobs/blobs_screen3.png',''],
         ['./images/blobs/blobs_screen4.png',''],
         ['./images/blobs/blobs_logo.png',''],
         ['./images/blobs/blobs_icon.png','']
-    ]);
+    ]};
+    createSlideViewer(slides1);
 </script>

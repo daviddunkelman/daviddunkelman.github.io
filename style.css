@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: paragraph;
-    src: url(./fonts/MuseoModerno-VariableFont_wght.ttf);
+    src: url(./fonts/Comfortaa-VariableFont_wght.ttf);
 }
 
 
@@ -22,7 +22,9 @@ body {
     max-width: 1050px;
     margin: 0 auto;
     padding: 20px;   
-    font-weight: 300;     
+    font-weight: 300;   
+    font-size: 11pt;  
+    text-align: justify;
 }
 .boundary {
     display: flexbox;
@@ -53,6 +55,7 @@ p {
 h1, h2, h3, h4 {
     font-family: Heading;
     font-weight: 100;
+    text-align: left;
 }
 
 h1 {
@@ -144,7 +147,43 @@ a:active {
     margin: auto;
     display: block;
 }
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 16px;
+    color: rgb(239, 68, 255);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    top:50%;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
 
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {  
+    color: white;
+    scale: 110%;
+}
+.prev:active,
+.next:active {
+    color: rgb(255, 123, 233);
+}
+
+.caption-container {
+    padding: 10px;
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0 0 20px 20px;
+}
 .imgbutton {
     width: 300px;
     border-radius: 20px 0 20px 0;
@@ -309,3 +348,4 @@ ul {
 .title{
     color: rgb(121, 130, 255);;
 }
+

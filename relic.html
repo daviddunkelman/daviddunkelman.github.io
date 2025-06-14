@@ -42,7 +42,10 @@
 </body>
 </html>
 <script>
-    createViewer("halenViewer", img=[
+    var slides1 = {
+        currentSlide:0,
+        thisID: "halenViewer",
+        imgs: [
         ['./images/halen/relic_halen_up.png',''],
         ['./images/halen/relic_halen_sheet.png',''],
         ['./images/halen/halen_crisp.png',''],
@@ -56,8 +59,11 @@
         ['./images/halen/halen_spear.png',''],
         ['./images/halen/halen_space.jpg',''],
         ['./images/halen/halen_first.png','']
-        ]);
-    createViewer("otherViewer", img=[
+        ]};
+        var slides2 = {
+        currentSlide:0,
+        thisID: "otherViewer",
+        imgs: [
         ['./images/relic/relic_skirm3.png',''],
         ['./images/relic/relic_skirm2.png',''],
         ['./images/relic/relic_skirm.png',''],
@@ -78,5 +84,7 @@
         ['./images/relic/relic_doctor.png',''],
         ['./images/relic/relic_revenant.png',''],
         ['./images/relic/relic_sniper.png','']
-    ]);
+    ]};
+    createSlideViewer(slides1);
+    createSlideViewer(slides2);
 </script>

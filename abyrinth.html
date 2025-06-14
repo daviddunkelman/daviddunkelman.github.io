@@ -40,7 +40,7 @@
         <p>I have programmed all the mechanics of the game, as well as the menu  and settings. As well, I have made most character models and all visual effects.</p>
         
         <h2>The Mechanics Demo</h2>
-        <p><a class="navbox" href="https://skypyre.itch.io/abyrinth">Mechanics Demo</a></p> 
+        <p><a class="navbox" href="https://skypyre.itch.io/abyrinth" target="_blank">Mechanics Demo</a></p> 
         <p>This is a link to a pre-alpha demo showcasing the mechanics of the game. It does not represent the most current state but it is a good representation.</p>
 
         <h2>Images</h2>
@@ -53,25 +53,75 @@
 </body>
 </html>
 <script>
-    createViewer("viewer1", img=[
-        ['./images/abyrinth/abyrinth_boi.png',''],
-        ['./images/abyrinth/abyrinth_eezoh.png',''],
-        ['./images/abyrinth/abyrinth_flame.gif',''],
-        ['./images/abyrinth/abyrinth_gun.png',''],
-        ['./images/abyrinth/abyrinth_spark.gif',''],
-        ['./images/abyrinth/abyrinth_pouncer.png',''],
-        ['./images/abyrinth/abyrinth_kimin.png',''],
-        ['./images/abyrinth/abyrinth_grunt.png',''],
-        ['./images/abyrinth/abyrinth_therae.jpg',''],
-        ['./images/abyrinth/abyrinth_mine.png',''],
-        ['./images/abyrinth/abyrinth_miner.jpg',''],
-        ['./images/abyrinth/abyrinth_halen.png',''],
-        ['./images/abyrinth/abyrinth_gunner.png',''],
-        ['./images/abyrinth/abyrinth_screen1.png',''],
-        ['./images/abyrinth/abyrinth_screen2.png',''],
-        ['./images/abyrinth/abyrinth_holo.png',''],
-        ['./images/abyrinth/abyrinth_logo.png',''],
-        ['./images/abyrinth/abyrinth_mainmenu.png','']
+    var slides1 = {
+        currentSlide:0,
+        thisID: "viewer1",
+        imgs: [
+        ['./images/abyrinth/abyrinth_boi.png',
+        '<p>The current model for Mylo, Abyrinth&apos;s main character. His look is emblematic of the character art style I am targeting. For this style, I sought to leverage two aspects: </p><p>One - A focus on strong, simple shapes, </p><p>Two - Pixel art that evokes a lived-in look. </p><p>Furthermore, Mylo&apos;s design needs to feel childish and small. Therefore, his limbs are long and gangly and his torso is covered by some sort of oversized shirt.</p>'],
+        ['./images/abyrinth/abyrinth_eezoh.png',
+        'Concept art for Mylo&apos;s uncle, Eezoh. Eezoh&apos;s design needed to convey a solidity and confidence while still fitting within the diminutive exaggerated proportions of Mylo&apos;s species.'],
+        ['./images/abyrinth/abyrinth_flame.gif',
+        'A small flame effect. Along with simplified models, I am also seeking to have simple and clean effects.'],
+        ['./images/abyrinth/abyrinth_gun.png',
+        'A pistol model. <>'],
+        ['./images/abyrinth/abyrinth_spark.gif',
+        'A small effect when mechanical devices take damage.'],
+        ['./images/abyrinth/abyrinth_pouncer.png',
+        '<>'],
+        ['./images/abyrinth/abyrinth_kimin.png',
+        'Concept art for the character of Kimin, a mining foreman aboard Abyrinth station. The workers of Abyrinth have various jobs but there will be some similarities in their uniforms. Kimin&apos;s represents the ruggedness of his job while also conforming to his species&apos;s unique needs.'],
+        ['./images/abyrinth/abyrinth_grunt.png',
+        ''],
+        ['./images/abyrinth/abyrinth_therae.jpg',
+        ''],
+        ['./images/abyrinth/abyrinth_mine.png',
+        ''],
+        ['./images/abyrinth/abyrinth_miner.jpg',
+        ''],
+        ['./images/abyrinth/abyrinth_halen.png',
+        ''],
+        ['./images/abyrinth/abyrinth_gunner.png',
+        ''],
+        ['./images/abyrinth/abyrinth_ui1.png',
+        ''],
+        ['./images/abyrinth/abyrinth_ui2.png',
+        'Example of a page in the menu. All settings work and save across play sessions. The menu style uses dithers to give it visual cohesion with the rest of the game.'],
+        ['./images/abyrinth/abyrinth_screen1.png',
+        ''],
+        ['./images/abyrinth/abyrinth_screen2.png',
+        ''],
+        ['./images/abyrinth/abyrinth_holo.png',
+        'Explorations into creating a hologram effect. The look is intended to mimic something like a CRT television, with individual dots of light in the air.'],
+        ['./images/abyrinth/abyrinth_logo.png',
+        ''],
+        ['./images/abyrinth/abyrinth_mainmenu.png',
+        'The current main menu, using placeholder assets for the scene. It is intended to depict Abyrinth station amidst an asteroid field.']
         
-    ]);
+    ]
+    };
+    createSlideViewer(slides1);
+
+
+    // createViewer("viewer1", img=[
+    //     ['./images/abyrinth/abyrinth_boi.png',''],
+    //     ['./images/abyrinth/abyrinth_eezoh.png',''],
+    //     ['./images/abyrinth/abyrinth_flame.gif',''],
+    //     ['./images/abyrinth/abyrinth_gun.png',''],
+    //     ['./images/abyrinth/abyrinth_spark.gif',''],
+    //     ['./images/abyrinth/abyrinth_pouncer.png',''],
+    //     ['./images/abyrinth/abyrinth_kimin.png',''],
+    //     ['./images/abyrinth/abyrinth_grunt.png',''],
+    //     ['./images/abyrinth/abyrinth_therae.jpg',''],
+    //     ['./images/abyrinth/abyrinth_mine.png',''],
+    //     ['./images/abyrinth/abyrinth_miner.jpg',''],
+    //     ['./images/abyrinth/abyrinth_halen.png',''],
+    //     ['./images/abyrinth/abyrinth_gunner.png',''],
+    //     ['./images/abyrinth/abyrinth_screen1.png',''],
+    //     ['./images/abyrinth/abyrinth_screen2.png',''],
+    //     ['./images/abyrinth/abyrinth_holo.png',''],
+    //     ['./images/abyrinth/abyrinth_logo.png',''],
+    //     ['./images/abyrinth/abyrinth_mainmenu.png','']
+        
+    // ]);
 </script>

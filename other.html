@@ -29,7 +29,10 @@
 </body>
 </html>
 <script>
-    createViewer("otherViewer", img=[
+    var slides1 = {
+        currentSlide:0,
+        thisID: "otherViewer",
+        imgs: [
         ['./images/other/other_Annatara2.png',''],
         ['./images/other/other_Slashheart.jpg',''],
         ['./images/other/other_3dXopex.png',''],
@@ -44,5 +47,6 @@
         ['./images/other/other_wind.png',''],
         ['./images/other/other_xopexdance.png',''],
         ['./images/other/other_Zonzovir_3.png','']
-    ]);
+    ]};
+    createSlideViewer(slides1);
 </script>

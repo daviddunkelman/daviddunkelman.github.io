@@ -25,7 +25,7 @@
             <div class="tag">3D Art</div>                     
             <div class="tag">Programming</div>            
         </div>     
-        <p><a class="navbox" href="https://store.steampowered.com/app/1540650/Evasive_Maneuvers/">Steam Page</a></p>
+        <p><a class="navbox" href="https://store.steampowered.com/app/1540650/Evasive_Maneuvers/ " target="_blank">Steam Page</a></p>
         <h2>About the project</h2>  
         <p>Evasive maneuvers an asymmetrical online multiplayer game in which you play as either runners or hunters. </p>
         <p>Runners scour the map for energy to power up their escape portal while hunters try to catch and destroy them. Runners and hunters each have different abilities they select. </p>
@@ -46,7 +46,10 @@
 </body>
 </html>
 <script>
-    createViewer("evasiveViewer", img=[
+    var slides1 = {
+        currentSlide:0,
+        thisID: "evasiveViewer",
+        imgs: [
     ['./images/evasive/evasive_hunterfx.png',''],
     ['./images/evasive/evasive_customization.gif',''],
     ['./images/evasive/evasive_artemis.png',''],
@@ -56,5 +59,6 @@
     ['./images/evasive/evasive_hunter1.png',''],
     ['./images/evasive/evasive_hunter3.png',''],
     ['./images/evasive/evasive_runner3.png',''] 
-    ]);
+    ]};
+    createSlideViewer(slides1);
 </script>

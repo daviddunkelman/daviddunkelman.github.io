@@ -28,7 +28,7 @@
         </div>
         
         
-        <a class="navbox" href="https://skypyre.itch.io/mushroam">Itch.io page</a>     
+        <a class="navbox" href="https://skypyre.itch.io/mushroam" target="_blank">Itch.io page</a>     
         <h2>About the project</h2>    
         <p>Mushroam is a 2.5D puzzle platformer. In the game, you control a mushroom person as they explore underground to seek a way to save their village.</p> 
         <h2>My Role</h2>   
@@ -45,15 +45,44 @@
 </body>
 </html>
 <script>
-    createViewer("pixelViewer",img=[
-    ['./images/mushroam/mushroam_mushbig.png',''],
-    ['./images/mushroam/mushroam_topsbig.png',''],
-    ['./images/mushroam/mushroam_veilbig.png',''],
-    ['./images/mushroam/mushroam_celiabig.png',''],
-    ['./images/mushroam/mushroam_sporabig.png',''],
-    ['./images/mushroam/mushroam_truffbig.png',''],
-    ['./images/mushroam/mushroam_bolobig.png',''],
-    ['./images/mushroam/mushroam_capibig.png',''],
-    ['./images/mushroam/mushroam_logo4x.png',''],
-    ]);
+    var slides1 = {
+        currentSlide:0,
+        thisID: "pixelViewer",
+        imgs: [
+    ['./images/mushroam/mushroam_mushbig.png','Mush! The default character of the game.'],
+    ['./images/mushroam/mushroam_topsbig.png',
+    ''],
+    ['./images/mushroam/mushroam_veilbig.png',
+    ''],
+    ['./images/mushroam/mushroam_celiabig.png',
+    ''],
+    ['./images/mushroam/mushroam_sporabig.png',
+    ''],
+    ['./images/mushroam/mushroam_truffbig.png',
+    ''],
+    ['./images/mushroam/mushroam_bolobig.png',
+    ''],
+    ['./images/mushroam/mushroam_capibig.png',
+    ''],
+    ['./images/mushroam/mushroam_characters.png',
+    ''],
+    ['./images/mushroam/mushroam_otherpixel.png',
+    ''],
+    ['./images/mushroam/mushroam_logo4x.png',
+    ''],
+    ['./images/mushroam/mushroam_forestvoxels.png',
+    ''],
+    ['./images/mushroam/mushroam_ruinvoxels.png',
+    ''],
+    ['./images/mushroam/mushroam_cityvoxels.png',
+    'Modular pieces for the second chapter of the game, in which the player explores a vast city.'],
+    ['./images/mushroam/mushroam_lairvoxels.png',
+    'Modular pieces for use in the fourth chapter of the game, in which the player explores a civilization dedicated to the ants.'],
+    ['./images/mushroam/mushroam_forestworld.png',
+    'A level featured in the demo.'],
+    ['./images/mushroam/mushroam_ruinworld.png',
+    'A level featured in the demo.'],
+    
+    ]};
+    createSlideViewer(slides1);
 </script>
