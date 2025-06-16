@@ -9,11 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <link rel="icon" type="image/x-icon" href="./images/SiteLogo.png">
 </head> 
-<script>
-    $.get("navigation.html", function(data){
-        $("#nav").replaceWith(data);
-    });
-</script>  
+
 <body>
     <div id= "nav"></div>
     <div class="boundary pattern9">
@@ -36,14 +32,16 @@
 
 
 
-        </div>
-        
-        
+        </div>       
     </div>
-    
-    
-
-
-
+    <div id="footer"></div>
+    <script>
+        $.get("navigation.html", function(data){
+            $("#nav").replaceWith(data);
+        });
+        $.get("footer.html", function(data){
+            $("#footer").replaceWith(data);
+        });
+    </script>  
 </body>
 </html>

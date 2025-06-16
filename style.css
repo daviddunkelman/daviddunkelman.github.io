@@ -13,12 +13,18 @@ html{
     min-height: 100%;
     scrollbar-color: #2e2447 rgb(17, 13, 27);
     scrollbar-width: thin;
+    --text:#b0b5ff;
+    --link:#ef44ff;
+    --bg-gradient1:#2c2344;
+    --bg-gradient2:#110d1b; 
+    --navbg:#3f2a7a;
+    --navborder:#724ad1;
 }
 body {
     background-color: rgb(13, 10, 20);
-    background: linear-gradient(0deg, rgb(44, 35, 68) 0%, rgb(17, 13, 27) 100%);
+    background: linear-gradient(0deg, var(--bg-gradient1) 0%, var(--bg-gradient2) 100%);
     font-family: paragraph;
-    color: rgb(176, 181, 255);
+    color: var(--text);
     max-width: 1050px;
     margin: 0 auto;
     padding: 20px;   
@@ -30,12 +36,13 @@ body {
     display: flexbox;
     background-color: rgb(35, 26, 59);
     padding: 20px;
+    border-top: 3px solid var(--bg-gradient1);
 }
 .navbox {
     display:inline;
-    background-color: rgb(63, 42, 122);
+    background-color: var(--navbg);
     padding: 5px 10px 7px 10px;
-    border-color: rgb(114, 74, 209);
+    border-color: var(--navborder);
     border-width: 1px;
     border-style: solid;
     border-radius: 20px 0 20px 0;
@@ -56,10 +63,11 @@ h1, h2, h3, h4 {
     font-family: Heading;
     font-weight: 100;
     text-align: left;
+    text-shadow: 3px 3px 3px rgba(31, 0, 172, 0.404);
 }
 
 h1 {
-    color: rgb(255, 255, 255);
+    color: white;
     font-size:xx-large;
     padding-top: 20px;
     padding-bottom: 10px;
@@ -83,10 +91,10 @@ h4 {
     padding-bottom: 10px;
 }
 a {
-    color: rgb(239, 68, 255);
+    color: var(--link);
 }
 a:hover {
-    color: rgb(255, 255, 255);
+    color: white;
 }
 a:active {
     color: rgb(255, 123, 233);
@@ -98,6 +106,7 @@ a:active {
 .column {
     float: left;
     padding: 10px;
+    object-fit: contain;
   }
   
 /* Style the images inside the grid */
@@ -123,7 +132,7 @@ a:active {
     position: absolute;
     bottom: 15px;
     left: 15px;
-    color: rgb(176, 181, 255);
+    color: var(--text);
     background-color: black;    
     font-size: 20px;
 }
@@ -137,22 +146,22 @@ a:active {
 .expandedImg {
     max-height: 100%;
     max-width: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* position: absolute; */
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
-    display: block;
+    /* margin: auto; */
 }
 .prev, .next{
     cursor: pointer;
     position: absolute;
     width: auto;
     padding: 16px;
-    color: rgb(239, 68, 255);
+    color: var(--link);
     font-weight: bold;
     font-size: 20px;
     border-radius: 0 3px 3px 0;
@@ -183,6 +192,8 @@ a:active {
     border-width: 2px;
     border-style: solid;
     border-radius: 0 0 20px 20px;
+    min-height: 170px;
+    text-align: center;
 }
 .imgbutton {
     width: 300px;
@@ -211,12 +222,13 @@ a:active {
 }
 .tag {
     border-radius: 20px 0 20px 0;
-    background-color: rgb(177, 71, 248);
+    background-color: #7d2fb1;
     color: white;
-    padding: 4px 7px 4px 7px;
-    border-color: rgb(75, 0, 105);
+    padding: 4px 10px 4px 10px;
+    border-color: rgb(181, 59, 230);
     border-width: 1px;
     border-style: solid;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.404);
 }
 ul {
     margin-bottom:15px;
@@ -348,4 +360,8 @@ ul {
 .title{
     color: rgb(121, 130, 255);;
 }
-
+.blockfooter{
+    background-color: var(--bg-gradient2);
+    padding-top: 10px;
+    text-align: center;
+}

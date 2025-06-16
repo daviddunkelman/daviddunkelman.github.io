@@ -10,11 +10,7 @@
     <script src="./script/imageExpand.js"></script>
     <link rel="icon" type="image/x-icon" href="./images/SiteLogo.png">
 </head> 
-<script>
-    $.get("navigation.html", function(data){
-        $("#nav").replaceWith(data);
-    });
-</script>  
+
 <body>
     <div id= "nav"></div>
     <div class="boundary pattern8">
@@ -42,47 +38,54 @@
         </ul> 
         <div id="pixelViewer"></div>
     </div>
+    <div id="footer"></div>
+    <script>
+        $.get("navigation.html", function(data){
+            $("#nav").replaceWith(data);
+        });
+        $.get("footer.html", function(data){
+            $("#footer").replaceWith(data);
+        });
+        var slides1 = {
+            currentSlide:0,
+            thisID: "pixelViewer",
+            imgs: [
+        ['./images/mushroam/mushroam_mushbig.png','Mush! The default character of the game.'],
+        ['./images/mushroam/mushroam_topsbig.png',
+        ''],
+        ['./images/mushroam/mushroam_veilbig.png',
+        ''],
+        ['./images/mushroam/mushroam_celiabig.png',
+        ''],
+        ['./images/mushroam/mushroam_sporabig.png',
+        ''],
+        ['./images/mushroam/mushroam_truffbig.png',
+        ''],
+        ['./images/mushroam/mushroam_bolobig.png',
+        ''],
+        ['./images/mushroam/mushroam_capibig.png',
+        ''],
+        ['./images/mushroam/mushroam_characters.png',
+        ''],
+        ['./images/mushroam/mushroam_otherpixel.png',
+        ''],
+        ['./images/mushroam/mushroam_logo4x.png',
+        ''],
+        ['./images/mushroam/mushroam_forestvoxels.png',
+        ''],
+        ['./images/mushroam/mushroam_ruinvoxels.png',
+        ''],
+        ['./images/mushroam/mushroam_cityvoxels.png',
+        'Modular pieces for the second chapter of the game, in which the player explores a vast city.'],
+        ['./images/mushroam/mushroam_lairvoxels.png',
+        'Modular pieces for use in the fourth chapter of the game, in which the player explores a civilization dedicated to the ants.'],
+        ['./images/mushroam/mushroam_forestworld.png',
+        'A level featured in the demo.'],
+        ['./images/mushroam/mushroam_ruinworld.png',
+        'A level featured in the demo.'],
+        
+        ]};
+        createSlideViewer(slides1);
+    </script>
 </body>
 </html>
-<script>
-    var slides1 = {
-        currentSlide:0,
-        thisID: "pixelViewer",
-        imgs: [
-    ['./images/mushroam/mushroam_mushbig.png','Mush! The default character of the game.'],
-    ['./images/mushroam/mushroam_topsbig.png',
-    ''],
-    ['./images/mushroam/mushroam_veilbig.png',
-    ''],
-    ['./images/mushroam/mushroam_celiabig.png',
-    ''],
-    ['./images/mushroam/mushroam_sporabig.png',
-    ''],
-    ['./images/mushroam/mushroam_truffbig.png',
-    ''],
-    ['./images/mushroam/mushroam_bolobig.png',
-    ''],
-    ['./images/mushroam/mushroam_capibig.png',
-    ''],
-    ['./images/mushroam/mushroam_characters.png',
-    ''],
-    ['./images/mushroam/mushroam_otherpixel.png',
-    ''],
-    ['./images/mushroam/mushroam_logo4x.png',
-    ''],
-    ['./images/mushroam/mushroam_forestvoxels.png',
-    ''],
-    ['./images/mushroam/mushroam_ruinvoxels.png',
-    ''],
-    ['./images/mushroam/mushroam_cityvoxels.png',
-    'Modular pieces for the second chapter of the game, in which the player explores a vast city.'],
-    ['./images/mushroam/mushroam_lairvoxels.png',
-    'Modular pieces for use in the fourth chapter of the game, in which the player explores a civilization dedicated to the ants.'],
-    ['./images/mushroam/mushroam_forestworld.png',
-    'A level featured in the demo.'],
-    ['./images/mushroam/mushroam_ruinworld.png',
-    'A level featured in the demo.'],
-    
-    ]};
-    createSlideViewer(slides1);
-</script>

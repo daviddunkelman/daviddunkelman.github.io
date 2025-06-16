@@ -53,14 +53,13 @@ function createSlideViewer(slides){
     let len = slides.imgs.length; 
     for (let i = 0;i< len; i++) {
         html += "<div class='column'>";
-        html += "<img class='demo' src="+slides.imgs[i][0]+" alt='"+slides.imgs[i][1]+"' style='width:100%' >"
-        //onclick='currentSlide("+i+","+slides+")'
+        html += "<img class='demo' src="+slides.imgs[i][0]+" alt='"+slides.imgs[i][1]+"'>"
         html += "</div>";
     }   
     html += "</div>";
 
     document.getElementById(slides.thisID).innerHTML = html;
-    document.getElementsByClassName("prev").innerHTML = "What!";
+    
 
     document.getElementById(slides.thisID).getElementsByClassName("prev")[0].onclick = function () {
         plusSlides(-1, slides);

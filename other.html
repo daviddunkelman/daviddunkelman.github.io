@@ -10,12 +10,7 @@
     <script src="./script/imageExpand.js"></script>
     <link rel="icon" type="image/x-icon" href="./images/SiteLogo.png">
 </head> 
-<script>
-    $.get("navigation.html", function(data){
-        $("#nav").replaceWith(data);
-    });
-   
-</script>  
+
 <body>
     <div id= "nav"></div>
     <div class="boundary pattern7">
@@ -26,27 +21,35 @@
            <div class="tag">3D Art</div>
         </div> 
         <div id="otherViewer"></div>
+    </div>
+    <div id="footer"></div>
+    <script>
+        $.get("navigation.html", function(data){
+            $("#nav").replaceWith(data);
+        });
+        $.get("footer.html", function(data){
+            $("#footer").replaceWith(data);
+        });
+        var slides1 = {
+            currentSlide:0,
+            thisID: "otherViewer",
+            imgs: [
+            ['./images/other/other_Annatara2.png',''],
+            ['./images/other/other_Slashheart.jpg',''],
+            ['./images/other/other_3dXopex.png',''],
+            ['./images/other/other_Awaken_The_Blade.png',''],
+            ['./images/other/other_Dak_At_Peace.png',''],
+            ['./images/other/other_Eideron.jpg',''],
+            ['./images/other/other_gals.jpg',''],
+            ['./images/other/other_koseth.png',''],
+            ['./images/other/other_preEideron.jpg',''],
+            ['./images/other/other_scout.png',''],
+            ['./images/other/other_skyworld.png',''],
+            ['./images/other/other_wind.png',''],
+            ['./images/other/other_xopexdance.png',''],
+            ['./images/other/other_Zonzovir_3.png','']
+        ]};
+        createSlideViewer(slides1);
+    </script>
 </body>
 </html>
-<script>
-    var slides1 = {
-        currentSlide:0,
-        thisID: "otherViewer",
-        imgs: [
-        ['./images/other/other_Annatara2.png',''],
-        ['./images/other/other_Slashheart.jpg',''],
-        ['./images/other/other_3dXopex.png',''],
-        ['./images/other/other_Awaken_The_Blade.png',''],
-        ['./images/other/other_Dak_At_Peace.png',''],
-        ['./images/other/other_Eideron.jpg',''],
-        ['./images/other/other_gals.jpg',''],
-        ['./images/other/other_koseth.png',''],
-        ['./images/other/other_preEideron.jpg',''],
-        ['./images/other/other_scout.png',''],
-        ['./images/other/other_skyworld.png',''],
-        ['./images/other/other_wind.png',''],
-        ['./images/other/other_xopexdance.png',''],
-        ['./images/other/other_Zonzovir_3.png','']
-    ]};
-    createSlideViewer(slides1);
-</script>

@@ -10,11 +10,7 @@
     <script src="./script/imageExpand.js"></script>
     <link rel="icon" type="image/x-icon" href="./images/SiteLogo.png">
 </head> 
-<script>
-    $.get("navigation.html", function(data){
-        $("#nav").replaceWith(data);
-    });
-</script>  
+
 <body>
     <div id= "nav"></div>
     <div class="boundary">
@@ -25,23 +21,25 @@
         <div id="sketchViewer"></div>  
 
     </div>
-
+    <script>
+         $.get("navigation.html", function(data){
+            $("#nav").replaceWith(data);
+        });
+        createViewer("sketchViewer", img=[
+            ['./images/sketch/sketch_baypage1.png',''],
+            ['./images/sketch/sketch_baypage2.png',''],
+            ['./images/sketch/sketch_baypage3.png',''],
+            ['./images/sketch/sketch_baypage4.png',''],
+            ['./images/sketch/sketch_baypage5.png',''],
+            ['./images/sketch/sketch_baypage6.png',''],
+            ['./images/sketch/sketch_baypage7.png',''],
+            ['./images/sketch/sketch_baypage8.png',''],
+            ['./images/sketch/sketch_baypage9.png',''],
+            ['./images/sketch/sketch_baypage10.png',''],
+            ['./images/sketch/sketch_baypage11.png','']
+            ]);
+    </script>
 
 
 </body>
 </html>
-<script>
-     createViewer("sketchViewer", img=[
-        ['./images/sketch/sketch_baypage1.png',''],
-        ['./images/sketch/sketch_baypage2.png',''],
-        ['./images/sketch/sketch_baypage3.png',''],
-        ['./images/sketch/sketch_baypage4.png',''],
-        ['./images/sketch/sketch_baypage5.png',''],
-        ['./images/sketch/sketch_baypage6.png',''],
-        ['./images/sketch/sketch_baypage7.png',''],
-        ['./images/sketch/sketch_baypage8.png',''],
-        ['./images/sketch/sketch_baypage9.png',''],
-        ['./images/sketch/sketch_baypage10.png',''],
-        ['./images/sketch/sketch_baypage11.png','']
-        ]);
-</script>

@@ -42,7 +42,15 @@
     </section>
 
 </div>
-
+<div id="footer"></div>
+<script>
+    $.get("navigation.html", function(data){
+        $("#nav").replaceWith(data);
+    });
+    $.get("footer.html", function(data){
+        $("#footer").replaceWith(data);
+    });
+</script>
 </body>
 
 </html>

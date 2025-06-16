@@ -9,14 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script src="./script/imageExpand.js"></script>
     <link rel="icon" type="image/x-icon" href="./images/SiteLogo.png">
-</head> 
-<script>
-    $.get("navigation.html", function(data){
-        $("#nav").replaceWith(data);
-    });    
-    
-   
-</script>  
+</head>
 <body>
     <div id= "nav"></div>
     <div class="boundary pattern2">       
@@ -39,52 +32,59 @@
 
         
     </div>
+    <div id="footer"></div>
+    <script>
+        $.get("navigation.html", function(data){
+            $("#nav").replaceWith(data);
+        });
+        $.get("footer.html", function(data){
+            $("#footer").replaceWith(data);
+        });  
+        var slides1 = {
+            currentSlide:0,
+            thisID: "halenViewer",
+            imgs: [
+            ['./images/halen/relic_halen_up.png',''],
+            ['./images/halen/relic_halen_sheet.png',''],
+            ['./images/halen/halen_crisp.png',''],
+            ['./images/halen/halen_bright.png',''],
+            ['./images/halen/halen_purple.png',''],
+            ['./images/halen/halen_dynamic.png',''],
+            ['./images/halen/halen_casual.png',''],
+            ['./images/halen/halen_gauntlet.png',''],
+            ['./images/halen/halen_grab.png',''],
+            ['./images/halen/halen_scarves.png',''],
+            ['./images/halen/halen_spear.png',''],
+            ['./images/halen/halen_space.jpg',''],
+            ['./images/halen/halen_first.png','']
+            ]};
+            var slides2 = {
+            currentSlide:0,
+            thisID: "otherViewer",
+            imgs: [
+            ['./images/relic/relic_skirm3.png',''],
+            ['./images/relic/relic_skirm2.png',''],
+            ['./images/relic/relic_skirm.png',''],
+            ['./images/relic/relic_brawler.png',''],
+            ['./images/relic/relic_brawler_sheet.png',''],
+            ['./images/relic/relic_gunner.png',''],
+            ['./images/relic/relic_gunner_sheet.png',''],
+            ['./images/relic/relic_asltgunner.png',''],
+            ['./images/relic/relic_foreman.png',''],
+            ['./images/relic/relic_charger.png',''],
+            ['./images/relic/relic_docship.png',''],
+            ['./images/relic/relic_float.png',''],
+            ['./images/relic/relic_flauripan.png',''],
+            ['./images/relic/relic_hship2.png',''],
+            ['./images/relic/relic_hship.png',''],
+            ['./images/relic/relic_theravall2.png',''],
+            ['./images/relic/relic_theravall.png',''],
+            ['./images/relic/relic_doctor.png',''],
+            ['./images/relic/relic_revenant.png',''],
+            ['./images/relic/relic_sniper.png','']
+        ]};
+        createSlideViewer(slides1);
+        createSlideViewer(slides2);
+    </script>
 </body>
 </html>
-<script>
-    var slides1 = {
-        currentSlide:0,
-        thisID: "halenViewer",
-        imgs: [
-        ['./images/halen/relic_halen_up.png',''],
-        ['./images/halen/relic_halen_sheet.png',''],
-        ['./images/halen/halen_crisp.png',''],
-        ['./images/halen/halen_bright.png',''],
-        ['./images/halen/halen_purple.png',''],
-        ['./images/halen/halen_dynamic.png',''],
-        ['./images/halen/halen_casual.png',''],
-        ['./images/halen/halen_gauntlet.png',''],
-        ['./images/halen/halen_grab.png',''],
-        ['./images/halen/halen_scarves.png',''],
-        ['./images/halen/halen_spear.png',''],
-        ['./images/halen/halen_space.jpg',''],
-        ['./images/halen/halen_first.png','']
-        ]};
-        var slides2 = {
-        currentSlide:0,
-        thisID: "otherViewer",
-        imgs: [
-        ['./images/relic/relic_skirm3.png',''],
-        ['./images/relic/relic_skirm2.png',''],
-        ['./images/relic/relic_skirm.png',''],
-        ['./images/relic/relic_brawler.png',''],
-        ['./images/relic/relic_brawler_sheet.png',''],
-        ['./images/relic/relic_gunner.png',''],
-        ['./images/relic/relic_gunner_sheet.png',''],
-        ['./images/relic/relic_asltgunner.png',''],
-        ['./images/relic/relic_foreman.png',''],
-        ['./images/relic/relic_charger.png',''],
-        ['./images/relic/relic_docship.png',''],
-        ['./images/relic/relic_float.png',''],
-        ['./images/relic/relic_flauripan.png',''],
-        ['./images/relic/relic_hship2.png',''],
-        ['./images/relic/relic_hship.png',''],
-        ['./images/relic/relic_theravall2.png',''],
-        ['./images/relic/relic_theravall.png',''],
-        ['./images/relic/relic_doctor.png',''],
-        ['./images/relic/relic_revenant.png',''],
-        ['./images/relic/relic_sniper.png','']
-    ]};
-    createSlideViewer(slides1);
-    createSlideViewer(slides2);
-</script>

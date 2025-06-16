@@ -10,12 +10,7 @@
     <script src="./script/imageExpand.js"></script>
     <link rel="icon" type="image/x-icon" href="./images/SiteLogo.png">
 </head> 
-<script>
-    $.get("navigation.html", function(data){
-        $("#nav").replaceWith(data);
-    });
-    
-</script>  
+
 <body>
     <div id= "nav"></div>
     <div class="boundary pattern4">
@@ -40,25 +35,31 @@
         </ul>
         <div id="evasiveViewer"></div>   
     </div>
-
+    <div id="footer"></div>
+    <script>
+        $.get("navigation.html", function(data){
+            $("#nav").replaceWith(data);
+        });
+        $.get("footer.html", function(data){
+            $("#footer").replaceWith(data);
+        });
+        var slides1 = {
+            currentSlide:0,
+            thisID: "evasiveViewer",
+            imgs: [
+        ['./images/evasive/evasive_hunterfx.png',''],
+        ['./images/evasive/evasive_customization.gif',''],
+        ['./images/evasive/evasive_artemis.png',''],
+        ['./images/evasive/evasive_kauthen.png',''],
+        ['./images/evasive/evasive_reyliant.png',''],
+        ['./images/evasive/evasive_zehil.png',''],
+        ['./images/evasive/evasive_hunter1.png',''],
+        ['./images/evasive/evasive_hunter3.png',''],
+        ['./images/evasive/evasive_runner3.png',''] 
+        ]};
+        createSlideViewer(slides1);
+    </script>
 
 
 </body>
 </html>
-<script>
-    var slides1 = {
-        currentSlide:0,
-        thisID: "evasiveViewer",
-        imgs: [
-    ['./images/evasive/evasive_hunterfx.png',''],
-    ['./images/evasive/evasive_customization.gif',''],
-    ['./images/evasive/evasive_artemis.png',''],
-    ['./images/evasive/evasive_kauthen.png',''],
-    ['./images/evasive/evasive_reyliant.png',''],
-    ['./images/evasive/evasive_zehil.png',''],
-    ['./images/evasive/evasive_hunter1.png',''],
-    ['./images/evasive/evasive_hunter3.png',''],
-    ['./images/evasive/evasive_runner3.png',''] 
-    ]};
-    createSlideViewer(slides1);
-</script>

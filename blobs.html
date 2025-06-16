@@ -10,12 +10,7 @@
     <script src="./script/imageExpand.js"></script>
     <link rel="icon" type="image/x-icon" href="./images/SiteLogo.png">
 </head> 
-<script>
-    $.get("navigation.html", function(data){
-        $("#nav").replaceWith(data);
-    });
-  
-</script>  
+
 <body>
     <div id= "nav"></div>
     <div class="boundary pattern5">
@@ -39,20 +34,28 @@
         </ul>
         <div id="blobsViewer"></div> 
     </div>
+    <div id="footer"></div>
+    <script>
+        $.get("navigation.html", function(data){
+            $("#nav").replaceWith(data);
+        });
+        $.get("footer.html", function(data){
+            $("#footer").replaceWith(data);
+        });
+    
 
+        var slides1 = {
+            currentSlide:0,
+            thisID: "blobsViewer",
+            imgs: [
+            ['./images/blobs/blobs_screen1.png',''],
+            ['./images/blobs/blobs_screen2.png',''],
+            ['./images/blobs/blobs_screen3.png',''],
+            ['./images/blobs/blobs_screen4.png',''],
+            ['./images/blobs/blobs_logo.png',''],
+            ['./images/blobs/blobs_icon.png','']
+        ]};
+        createSlideViewer(slides1);
+    </script>
 </body>
 </html>
-<script>
-    var slides1 = {
-        currentSlide:0,
-        thisID: "blobsViewer",
-        imgs: [
-        ['./images/blobs/blobs_screen1.png',''],
-        ['./images/blobs/blobs_screen2.png',''],
-        ['./images/blobs/blobs_screen3.png',''],
-        ['./images/blobs/blobs_screen4.png',''],
-        ['./images/blobs/blobs_logo.png',''],
-        ['./images/blobs/blobs_icon.png','']
-    ]};
-    createSlideViewer(slides1);
-</script>
