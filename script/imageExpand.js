@@ -39,8 +39,8 @@ function createSlideViewer(slides){
     
     var html = "";
 
-    html += "<div class='container'>"; 
-    html += "<img id='"+ slides.thisID +"V' class='expandedImg' src="+slides.imgs[0][0]+">";   
+    html += "<div class='viewer-container'>"; 
+    html += "<img id='"+ slides.thisID +"V' class='expanded-img' src="+slides.imgs[0][0]+">";   
     html +="<a class='prev'>&#10094;</a>"
     html +="<a class='next'>&#10095;</a>"
     html += "</div>";
@@ -49,10 +49,10 @@ function createSlideViewer(slides){
     html += "   <div id='"+ slides.thisID +"T' >"+slides.imgs[0][1]+"></div>"
     html += "</div>"
 
-    html += "<div class='row'>";  
+    html += "<div class='gallery'>";  
     let len = slides.imgs.length; 
     for (let i = 0;i< len; i++) {
-        html += "<div class='column'>";
+        html += "<div class='thumbnail'>";
         html += "<img class='demo' src="+slides.imgs[i][0]+" alt='"+slides.imgs[i][1]+"'>"
         html += "</div>";
     }   
