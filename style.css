@@ -143,12 +143,12 @@ a:active {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* position: absolute; */
+ 
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    /* margin: auto; */
+  
 }
 .prev, .next{
     cursor: pointer;
@@ -169,16 +169,18 @@ a:active {
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* On hover*/
 .prev:hover,
 .next:hover {  
-    color: white;
+    mix-blend-mode:difference;
+    color: rgb(255, 255, 255);
     scale: 110%;
 }
 .prev:active,
 .next:active {
     color: rgb(255, 123, 233);
 }
+
 
 .caption-container {
     padding: 10px;
@@ -353,6 +355,60 @@ ul {
     conic-gradient(from 150deg at 50% 0,var(--c1) 60deg,var(--c2) 0);
   background-size: var(--s) calc(var(--s)*cos(30deg));
 }
+
+.pattern10 {
+  --s: 150px; /* control the size*/
+  --c2: #231a3b;
+  --c1: #2e2446; 
+  
+  background:
+    linear-gradient(45deg,var(--c1) 12.5%,var(--c2) 0 25%,#0000 0 75%,var(--c2) 0 87.5%,var(--c1) 0)
+     calc(var(--s)/2) calc(var(--s)/2),
+    linear-gradient(45deg,var(--c2) 12.5%,var(--c1) 0 25%,#0000 0 75%,var(--c1) 0 87.5%,var(--c2) 0),
+    repeating-linear-gradient(-45deg,var(--c1) 0 12.5%,var(--c2) 0 25%,var(--c1) 0 37.5%,var(--c2) 0 62.5%);
+  background-size: var(--s) var(--s);
+
+}
+
+.pattern11 {
+  --s: 121px; /* control the size*/
+  --c2: #231a3b;
+  --c1: #2e2446; 
+  --c: var(--c1) 12.5%,var(--c2) 0 25%,#0000 0;
+  background:
+    conic-gradient(at 80% 20%,var(--c))
+     calc(2*var(--s)/-5) calc(2*var(--s)/5),
+    conic-gradient(from 180deg at 60% 40%,var(--c))
+     calc(var(--s)/5) calc(var(--s)/-5),
+    conic-gradient(at 0% 100%,var(--c));
+  background-size: var(--s) var(--s);
+}
+
+.pattern12 {
+  --s: 120px; /* control the size*/
+  --c2: #231a3b;
+  --c1: #2e2446;
+    
+  background:
+    radial-gradient(var(--c1) 14%,var(--c2) 15% 30%,var(--c1) 31% 44%,var(--c2) 45% 60%,#0000 61%),
+    linear-gradient( 45deg,#0000 46%,var(--c2) 0 54%,#0000 0),
+    linear-gradient(-45deg,#0000 46%,var(--c2) 0 54%,#0000 0) var(--c1);
+  background-size: var(--s) var(--s);
+}
+
+.pattern13 {
+  --s: 50px; /* control the size*/
+--c2: #231a3b;
+  --c1: #2e2446;
+  
+  --_g: radial-gradient(var(--c2) 49%,#0000 50%);
+  background:
+   var(--_g) calc(var(--s)/-2) calc(var(--s)/2),
+   repeating-conic-gradient(from 45deg,var(--c1) 0 25%,#0000 0 50%)
+     calc(var(--s)/2) calc(var(--s)/2),
+   var(--_g),var(--_g) var(--s) var(--s) var(--c1);
+  background-size: calc(2*var(--s)) calc(2*var(--s));
+}
 .title{
     color: var(--title);
 }
@@ -368,4 +424,29 @@ ul {
     border-width: 8px;
     border-style: double;
     border-radius: 70px 0 70px 0;
+}
+
+
+#btnTop {
+    cursor: pointer;   
+    margin-top: 50px;
+    color: var(--link);
+    width: 100%;
+    background-color: var(--navbg);
+    padding: 5px 10px 7px 10px;
+    border-color: var(--navborder);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 20px 0 20px 0;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: large;
+    
+}
+#btnTop:hover{
+    color: white;
+    padding: 10px 10px 12px 10px;
+    margin-top: 45px;
+    margin-bottom: -5px;
+
 }

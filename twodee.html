@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logos</title>
+    <title>2D Art</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
@@ -11,16 +11,22 @@
     <script src="./imagelist.js"></script>
     <link rel="icon" type="image/x-icon" href="./images/SiteLogo.png">
 </head> 
+
 <body>
     <div id= "nav"></div>
-    <div class="boundary pattern6">
-        <h1>Logos</h1>    
+    <div class="boundary pattern10">
+        <h1>2D Art</h1>   
         <div class="tag-holder">
-            <div class="tag">2D Art</div>
-        </div>
-        <div id="logoViewer"></div>
-        <h2>Skypyre Logo Case Study</h2>
-        <div id="spViewer"></div>
+            <div class="tag">Mushroam</div>  
+            <div class="tag">Logos</div>               
+            <div class="tag">ABYRINTH</div>                     
+            <div class="tag">Relicbound</div>   
+            <div class="tag">Other Artworks</div>               
+        </div>     
+        
+
+       
+        <div id="twodeeViewer"></div> 
         <button onclick="gotoTop()" id="btnTop" title="Go to top">Go to top</button>
     </div>
     <div id="footer"></div>
@@ -30,19 +36,15 @@
         });
         $.get("footer.html", function(data){
             $("#footer").replaceWith(data);
-        });   
+        });
+    
+
         var slides1 = {
             currentSlide:0,
-            thisID: "logoViewer",
-            imgs: logoImgs
-        };
-        var slides2 = {
-            currentSlide:0,
-            thisID: "spViewer",
-            imgs: spImgs
+            thisID: "twodeeViewer",
+            imgs: twodeeImgs
         };
         createSlideViewer(slides1);
-        createSlideViewer(slides2);
     </script>
 </body>
 </html>

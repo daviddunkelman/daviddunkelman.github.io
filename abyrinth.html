@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script src="./script/imageExpand.js"></script>
+    <script src="./imagelist.js"></script>
     <link rel="icon" type="image/x-icon" href="./images/SiteLogo.png">   
 </head> 
 
@@ -21,8 +22,7 @@
             <div class="tag">Programming</div>
             <div class="tag">UI</div>
             <div class="tag">Visual FX</div>
-        </div>
-        
+        </div> 
        
 
 
@@ -41,7 +41,9 @@
         <h2>Images</h2>
         <p>These are images of characters and visual development for the look of the game.</p>
         <div id="viewer1"></div>
-        
+
+
+        <button onclick="gotoTop()" id="btnTop" title="Go to top">Go to top</button>
     </div>
     <div id="footer"></div>
     <script>
@@ -54,74 +56,9 @@
         var slides1 = {
             currentSlide:0,
             thisID: "viewer1",
-            imgs: [
-            ['./images/abyrinth/abyrinth_boi.png',
-            '<p>The current model for Mylo, Abyrinth&apos;s main character. His look is emblematic of the character art style I am targeting. For this style, I sought to leverage two aspects: </p><p>One - A focus on strong, simple shapes, </p><p>Two - Pixel art that evokes a lived-in look. </p><p>Furthermore, Mylo&apos;s design needs to feel childish and small. Therefore, his limbs are long and gangly and his torso is covered by some sort of oversized shirt.</p>'],
-            ['./images/abyrinth/abyrinth_eezoh.png',
-            'Concept art for Mylo&apos;s uncle, Eezoh. Eezoh&apos;s design needed to convey a solidity and confidence while still fitting within the diminutive exaggerated proportions of Mylo&apos;s species.'],
-            ['./images/abyrinth/abyrinth_flame.gif',
-            'A small flame effect. Along with simplified models, I am also seeking to have simple and clean effects.'],
-            ['./images/abyrinth/abyrinth_gun.png',
-            'A pistol model. An initial test of props in the general art style.'],
-            ['./images/abyrinth/abyrinth_spark.gif',
-            'A small effect when mechanical devices take damage. There are multiple components to it, including several simple effects and an animated lightning beam.'],
-            ['./images/abyrinth/abyrinth_pouncer.png',
-            '<p>The model for the Pouncer enemy. The initial design was a reference to an older enemy from a previous game, but retooled to be more imposing.</p> <p>The design emphasizes long limbs and slenderness because this is an enemy that leaps far and moves quickly.</p>'],
-            ['./images/abyrinth/abyrinth_kimin.png',
-            'Concept art for the character of Kimin, a mining foreman aboard Abyrinth station. The workers of Abyrinth have various jobs but there will be some similarities in their uniforms. Kimin&apos;s represents the ruggedness of his job while also conforming to his species&apos;s unique needs.'],
-            ['./images/abyrinth/abyrinth_grunt.png',
-            'The model for the Grunt enemy. The goal visually was for it to look tough but not particularly fast. In the game, the grunt is resistant to damage, but easy to evade. '],
-            ['./images/abyrinth/abyrinth_therae.jpg',
-            'Concept art for a non-specific member of the therae species. The purpose of this piece was to explore the general posture, structure, and head shape.'],
-            ['./images/abyrinth/abyrinth_mine.png',
-            'The model for the flying mine. The flying mine is a small airborne enemy. The goal visually was to convey that it was a mine, so I gave it spikes to evoke a sea mine. '],
-            ['./images/abyrinth/abyrinth_miner.jpg',
-            'An initial concept for a miner working aboard abyrinth. Their outfit matches Kimin&apos;s, but they have a helmet. The helmet serves to anonymize them so they can serve as a generic character.'],
-            ['./images/abyrinth/abyrinth_halen.png',
-            'The model for the character of Halen as she appears in Abyrinth. The model was also a testbed for modelling and rigging a more human style character.'],
-            ['./images/abyrinth/abyrinth_gunner.png',
-            'The model for the Gunner enemy. In game, the right arm has a large rotating minigun attached to it. The gunner functions as a larger and more dangerous version of the grunt.'],
-            ['./images/abyrinth/abyrinth_ui1.png',
-            'The current HUD. There is an animated dither that runs through, evoking a holographic device that is not working perfectly. The blocks on the bottom left represent Mylo&apos;s health. Throughout the game, you can increase your maximum health by collecting fruit. The count of total fruit and how long until gaining more health is on the right side. Above the health are different blocks, each indicating a different ability you have found.'],
-            ['./images/abyrinth/abyrinth_ui2.png',
-            'Example of a page in the menu. All settings work and save across play sessions. The menu style uses dithers to give it visual cohesion with the rest of the game.'],
-            ['./images/abyrinth/abyrinth_screen1.png',
-            'A test scene. It uses various textures and models made for the game to simulate how they all will work together in the final product.'],
-            ['./images/abyrinth/abyrinth_screen2.png',
-            'An experiment using simple textures and binary space partitioning to create an angular environment. It was part of explorations into how the levels might look.'],
-            ['./images/abyrinth/abyrinth_holo.png',
-            'Explorations into creating a hologram effect. The look is intended to mimic something like a CRT television, with individual dots of light in the air.'],
-            ['./images/abyrinth/abyrinth_logo.png',
-            'The current ABYRINTH logo. The goal was to create a wordmark that was tastefully sci-fi without being too unreadable. A swooshing trail and an angular dot on the I were added to suggest a space ship or a planetary ring.'],
-            ['./images/abyrinth/abyrinth_mainmenu.png',
-            'The current main menu, using placeholder assets for the scene. It is intended to depict Abyrinth station amidst an asteroid field.']
-            
-        ]
+            imgs: abyrinthImgs   
         };
-        createSlideViewer(slides1);
-
-
-        // createViewer("viewer1", img=[
-        //     ['./images/abyrinth/abyrinth_boi.png',''],
-        //     ['./images/abyrinth/abyrinth_eezoh.png',''],
-        //     ['./images/abyrinth/abyrinth_flame.gif',''],
-        //     ['./images/abyrinth/abyrinth_gun.png',''],
-        //     ['./images/abyrinth/abyrinth_spark.gif',''],
-        //     ['./images/abyrinth/abyrinth_pouncer.png',''],
-        //     ['./images/abyrinth/abyrinth_kimin.png',''],
-        //     ['./images/abyrinth/abyrinth_grunt.png',''],
-        //     ['./images/abyrinth/abyrinth_therae.jpg',''],
-        //     ['./images/abyrinth/abyrinth_mine.png',''],
-        //     ['./images/abyrinth/abyrinth_miner.jpg',''],
-        //     ['./images/abyrinth/abyrinth_halen.png',''],
-        //     ['./images/abyrinth/abyrinth_gunner.png',''],
-        //     ['./images/abyrinth/abyrinth_screen1.png',''],
-        //     ['./images/abyrinth/abyrinth_screen2.png',''],
-        //     ['./images/abyrinth/abyrinth_holo.png',''],
-        //     ['./images/abyrinth/abyrinth_logo.png',''],
-        //     ['./images/abyrinth/abyrinth_mainmenu.png','']
-            
-        // ]);
+        createSlideViewer(slides1);       
     </script>
 </body>
 </html>

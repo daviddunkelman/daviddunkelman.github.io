@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <link rel="icon" type="image/x-icon" href="./images/SiteLogo.png">
+</head>   
+<div id= "nav"></div>
+<script>
+    $.get("navigation.html", function(data){
+        $("#nav").replaceWith(data);
+    });
+</script> 
+<div class="boundary pattern13">
+    <section class="tile-container">
+        <div class="tile">
+            <a href="./threedee.html"> <img class="imgbutton" src="./images/general/Tile_threedee.png"></a>
+        </div>
+        <div class="tile">
+            <a href="./twodee.html"> <img class="imgbutton" src="./images/relic/Tile_Relicbound.png"></a>
+        </div>
+        <div class="tile">
+            <a href="./vfx.html"> <img class="imgbutton" src="./images/mushroam/Tile_Mushroam.png"></a>
+        </div>
+        
+      
+    </section>
+
+</div>
+<div id="footer"></div>
+<script>
+    $.get("navigation.html", function(data){
+        $("#nav").replaceWith(data);
+    });
+    $.get("footer.html", function(data){
+        $("#footer").replaceWith(data);
+    });
+</script>
+</body>
+
+</html>
