@@ -43,7 +43,7 @@ function createSlideViewer(slides){
     html += "<img id='"+ slides.thisID +"V' class='expanded-img' src="+slides.imgs[0][0]+">";   
     html +="<a class='prev'>&#10094;</a>"
     html +="<a class='next'>&#10095;</a>"
-    html +="<a class='zoom'>&#x26F6;</a>"
+    html +="<a id='zoomToggle' class='zoom'>&#x26F6;</a>"
     html += "</div>";
     
     html += "<div class='caption-container'>"
@@ -68,7 +68,7 @@ function createSlideViewer(slides){
     document.getElementById(slides.thisID).getElementsByClassName("next")[0].onclick = function () {
         plusSlides(1, slides);
     }
-    document.getElementById('viewer').onclick = function () {
+    document.getElementById('zoomToggle').onclick = function () {
         document.getElementById('viewer').classList.toggle('viewer-container');
     }
 
