@@ -39,10 +39,11 @@ function createSlideViewer(slides){
     
     var html = "";
 
-    html += "<div class='viewer-container'>"; 
+    html += "<div id='viewer' class='viewer-container'>"; 
     html += "<img id='"+ slides.thisID +"V' class='expanded-img' src="+slides.imgs[0][0]+">";   
     html +="<a class='prev'>&#10094;</a>"
     html +="<a class='next'>&#10095;</a>"
+    html +="<a class='zoom'>&#x26F6;</a>"
     html += "</div>";
     
     html += "<div class='caption-container'>"
@@ -67,6 +68,10 @@ function createSlideViewer(slides){
     document.getElementById(slides.thisID).getElementsByClassName("next")[0].onclick = function () {
         plusSlides(1, slides);
     }
+    document.getElementById('viewer').onclick = function () {
+        document.getElementById('viewer').classList.toggle('viewer-container');
+    }
+
     var slidebtns = document.getElementById(slides.thisID).getElementsByClassName("demo");
     for (let i = 0;i< len; i++) {
         slidebtns[i].onclick = function () {

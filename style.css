@@ -143,11 +143,13 @@ a:active {
     width: 100%;
     height: 100%;
     object-fit: contain;
+   
  
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    
   
 }
 .prev, .next{
@@ -179,6 +181,20 @@ a:active {
 .prev:active,
 .next:active {
     color: rgb(255, 123, 233);
+}
+
+.zoom{
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 16px;
+    color: var(--link);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    top:90%;
 }
 
 

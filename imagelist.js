@@ -160,7 +160,12 @@ var otherImgs = [
     ['./images/other/other_skyworld.png','ABOVE. The skyworld from the 2022 game jam game Cloud Raider. I created a set of reusable assets for different islands and swtructures as well as clouds of different shapes. It was meant to have an idyllic feeling when contrasted with the ruined world beneath the clouds.'],
     ['./images/other/other_wind.png','WINDRIDER. A low-poly pixel-textured space ship. It was meant to evoke ships like the X-Wing from Starwars and the Arwing from Starfox while also adding a flare. The ship was made to be very pointy as a contrast to the other ships which tended to be more rounded.'],
     ['./images/other/other_xopexdance.png','DANCING BLADEWIZARD. My goal for this piece was to express the idea that the character was balanced up on the staff.'],
-    ['./images/other/other_Zonzovir_3.png','ZONZOVIR. ']
+    ['./images/other/other_Zonzovir_3.png','ZONZOVIR. '],
+    ['./images/other/other_dunefolk1.png','CHIEFTESS OF THE SOTOTHI. '],
+    ['./images/other/other_eideron2.png','EIDERON, BEARER OF THE CRESCENT BLADE. '],
+    ['./images/other/other_ghost.png','THE GHOST.'],
+    ['./images/other/other_antisquare.jpg','THE ANTISQUARE.']
+
 ]
 
 var halenImgs = [
