@@ -137,6 +137,12 @@ a:active {
     background-color: black;
     
 }
+.viewer-container-expand {
+    width: 100%;
+    position: relative;
+    background-color: black;
+    
+}
 .expanded-img {
     max-height: 100%;
     max-width: 100%;
@@ -194,7 +200,7 @@ a:active {
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
-    top:90%;
+    top:10px;
 }
 
 

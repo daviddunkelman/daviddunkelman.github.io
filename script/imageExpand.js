@@ -70,6 +70,9 @@ function createSlideViewer(slides){
     }
     document.getElementById('zoomToggle').onclick = function () {
         document.getElementById('viewer').classList.toggle('viewer-container');
+        document.getElementById('viewer').classList.toggle('viewer-container-expand');
+       
+       
     }
 
     var slidebtns = document.getElementById(slides.thisID).getElementsByClassName("demo");
